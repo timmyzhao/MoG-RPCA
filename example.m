@@ -3,8 +3,7 @@ clear;clc;
 % Data generation
 m = 100;
 n = 100;
-% r = 0.05*m;
-r = 1;
+r = 0.05*m;
 
 U = randn(m, r);
 V = randn(r, n);
