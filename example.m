@@ -39,10 +39,10 @@ mog_prior.d0 = 1e-3;
 mog_prior.alpha0 = 1e-3;
 mog_prior.beta0 = 1e-3;
 
-[lr_model, mog_model, r] = mog_rpca(Y, param, lr_prior, mog_prior);
+[lr_model, mog_model, est_rank] = mog_rpca(Y, param, lr_prior, mog_prior);
 
 L = lr_model.U*lr_model.V';
 rre = norm(L-M,'fro')/norm(M,'fro');
 
 display(['Relative reconstruction error: ', num2str(rre)]);
-display(['Estimated rank: ', num2str(r)]);
+display(['Estimated rank: ', num2str(est_rank)]);
